@@ -1,11 +1,35 @@
-# Sparky-project
-Sparky project in Datascientist lesson in udacity
+# Readme
 
-1.项目目的：预测客户是否为流失客户
-2.项目概述
-  a.流失定义：客户选择取消按钮定义为流失
-  b.数据说明:数据主要为每个客户的操作日志流水
-  c.建模流程说明:第一步完成流失定义，然后将日志流水聚合到一个客户粒度，这里注意去除客户操作取消按钮后的流水，防止模型含有之后的信息导致模型不准确。最后
-计算每个客户的变量
-  d.使用逻辑回归建模，调参等
-3.项目优化方向：可以构建更多特征进行模型预测
+
+优达学诚数据科学家纳米学位灾害应对通道
+
+
+## 内容列表
+
+- [项目说明](#项目说明)
+- [包含内容](#包含内容)
+- [操作手册](#操作手册)
+
+
+
+## 项目说明
+
+此项目实现的主要功能为提供一个网址,给网址中输入求救信息，网址会给求救信息进行分类，区分此求救是哪种求助，比如缺水等.
+
+
+## 包含内容
+
+1. 数据清理，会对过往已有信息进行清洗
+2. 模型训练，对以往已有标签分类进行训练
+3.通过FLASK进行部署
+
+## 操作手册
+
+ - To run ETL pipeline that cleans data and stores in database
+        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
+ - To run ML pipeline that trains classifier and saves
+        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+ 2. Run the following command in the app's directory to run your web app.
+    `python run.py`
+
+
